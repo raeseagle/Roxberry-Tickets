@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head><meta name="robots" content="noindex" /><title>Forms</title></head>
+  <body>
+    <!--
+      Hidden form definition for Netlify Forms. The website submits this form
+      from the server each time tickets are claimed, and Netlify emails the
+      details to whoever is set up under Site configuration -> Notifications.
+      Field names must match src/lib/email.ts exactly.
+    -->
+    <form name="ticket-allocated" data-netlify="true" netlify-honeypot="bot-field" hidden>
+      <input type="hidden" name="form-name" value="ticket-allocated" />
+      <input name="bot-field" />
+      <input name="client_name" />
+      <input name="client_email" />
+      <input name="tickets" />
+      <input name="game" />
+      <input name="game_date" />
+      <input name="start_time" />
+      <input name="venue" />
+      <input name="seats_remaining" />
+      <input name="requested_at" />
+      <input name="dashboard_link" />
+    </form>
+
+    <form name="game-reminder" data-netlify="true" netlify-honeypot="bot-field" hidden>
+      <input type="hidden" name="form-name" value="game-reminder" />
+      <input name="bot-field" />
+      <input name="game" />
+      <input name="game_date" />
+      <input name="start_time" />
+      <input name="venue" />
+      <input name="status" />
+      <input name="seats_total" />
+      <input name="seats_claimed" />
+      <input name="seats_unclaimed" />
+      <textarea name="clients"></textarea>
+      <input name="dashboard_link" />
+    </form>
+  </body>
+</html>
